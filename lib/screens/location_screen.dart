@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xaea104/utilities/constants.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -24,21 +26,40 @@ class _LocationScreenState extends State<LocationScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   FlatButton(onPressed: (){
-                    print("Clickd");
+                    print("Clicked near_me");
                   }, child: Icon(
                     Icons.near_me,
                     size: 40.0,
                   )),
                   FlatButton(onPressed: (){
-                    print("Clickd");
+                    print("Clicked location_city");
                   }, child: Icon(
-                    Icons.near_me,
+                    Icons.location_city,
                     size: 40.0,
                   ))
                 ],
-              )
+              ),
+
+              Padding(padding: EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "28", style: KTempTextStyle
+                  ),
+                  Text(
+                      "Icon")
+                ],
+              ),
+              ),
+
+              Padding(padding: EdgeInsets.only(left: 15),
+              child: Text(
+                "Its ... time in ikejhhhhhha",
+                 style: KMessageTextStyle
+              ),)
             ],
           ),
         ),

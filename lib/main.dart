@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xaea104/screens/city_screen.dart';
 import 'package:xaea104/screens/location_screen.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
-      home: LocationScreen(),
+      home: CityScreen(),
     );
   }
 }

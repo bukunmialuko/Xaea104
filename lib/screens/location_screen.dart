@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xaea104/screens/city_screen.dart';
 import 'package:xaea104/utilities/constants.dart';
+
+import '../routes.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -34,9 +37,25 @@ class _LocationScreenState extends State<LocationScreen> {
                     Icons.near_me,
                     size: 40.0,
                   )),
-                  FlatButton(onPressed: (){
+
+
+                  FlatButton(onPressed: () async{
+
                     print("Clicked location_city");
-                    //Navigator.push(context, route)
+                    var typedName = await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return CityScreen();
+                        }
+                      )
+                    );
+
+                    if(typedName != null){
+                      print(typedName);
+                    }
+
+
                   }, child: Icon(
                     Icons.location_city,
                     size: 40.0,

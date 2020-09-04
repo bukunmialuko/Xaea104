@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xaea104/utilities/constants.dart';
 
+import '../routes.dart';
+
 class CityScreen extends StatefulWidget {
   @override
   _CityScreenState createState() => _CityScreenState();
@@ -26,7 +28,7 @@ class _CityScreenState extends State<CityScreen> {
                 alignment: Alignment.topLeft,
                 child: FlatButton(
                     onPressed: () {
-                      print("Clicked on back button");
+                      Navigator.pop(context);
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -48,6 +50,7 @@ class _CityScreenState extends State<CityScreen> {
               ),
               FlatButton(onPressed: (){
                 print("Get Weather");
+                Navigator.pop(context, cityName);
               }, child: Text(
                 "Get weather",
                 style: KButtonStyle,

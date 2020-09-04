@@ -67,7 +67,7 @@ class _LocationScreenState extends State<LocationScreen> {
               child: Row(
                 children: [
                   Text(
-                    "28", style: KTempTextStyle
+                    "28 °", style: KTempTextStyle
                   ),
                   Text(
                       "Icon")

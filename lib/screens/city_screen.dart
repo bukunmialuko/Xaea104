@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xaea104/utilities/constants.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -6,6 +7,9 @@ class CityScreen extends StatefulWidget {
 }
 
 class _CityScreenState extends State<CityScreen> {
+
+  String cityName;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,27 +39,19 @@ class _CityScreenState extends State<CityScreen> {
                   style: TextStyle(
                     color: Colors.black
                   ),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    icon: Icon(
-                      Icons.location_city,
-                      color: Colors.white,
-                    ),
-                    hintText: "Enter City Name",
-                    hintStyle: TextStyle(
-                      color: Colors.grey
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                      borderSide: BorderSide.none
-                    )
-                  ),
+                  decoration: KInputDecoration,
                   onChanged: (value){
                     print(value);
+                    cityName = value;
                   },
                 ),
-              )
+              ),
+              FlatButton(onPressed: (){
+                print("Get Weather");
+              }, child: Text(
+                "Get weather",
+                style: KButtonStyle,
+              ))
             ],
           ),
         ),
